@@ -9,55 +9,61 @@ document.getElementById("traineeDiscount").innerHTML = TRAINEE_DISCOUNT;
 document.getElementById("juniorDiscount").innerHTML = JUNIOR_DISCOUNT;
 
 const getDiscount = (category) => {
-    let discount;
+  let discount;
 
-    switch (category) {
-        case "student":
-            discount = STUDENT_DISCOUNT;
-            break;
-        case "trainee":
-            discount = TRAINEE_DISCOUNT;
-            break;
-        case "junior":
-            discount = JUNIOR_DISCOUNT;
-            break;
-        default:
-            discount = 0;
-            break;
-    }
+  switch (category) {
+    case "student":
+      discount = STUDENT_DISCOUNT;
+      break;
+    case "trainee":
+      discount = TRAINEE_DISCOUNT;
+      break;
+    case "junior":
+      discount = JUNIOR_DISCOUNT;
+      break;
+    default:
+      discount = 0;
+      break;
+  }
 
-    return discount / 100;
+  return discount / 100;
 };
 
 const getTicketDiscountPrice = (price, discount) => {
-    if(discount <= 0 || isNaN(discount)) {
-        return price;
-    }
+  if (discount <= 0 || isNaN(discount)) {
+    return price;
+  }
 
-    return (price - (price * discount));
+  return price - price * discount;
 };
 
 const calculatePrice = (price, quantity, discount) => {
-    if(isNaN(quantity) || quantity < 1){
-        return 0;
-    }
+  if (isNaN(quantity) || quantity < 1) {
+    return 0;
+  }
 
-    return (quantity * getTicketDiscountPrice(price, discount));
+  return quantity * getTicketDiscountPrice(price, discount);
 };
 
 const getPrice = () => {
-    const category = document.getElementById("category").value;
-    const quantity = Math.round( parseInt( document.getElementById("quantity").value ) );
-    
-    const discount = getDiscount(category);
-    const totalPrice = calculatePrice(PRICE, quantity, discount);
+  const category = document.getElementById("category").value;
+  const quantity = Math.round(
+    parseInt(document.getElementById("quantity").value)
+  );
 
-    return totalPrice;
+  const discount = getDiscount(category);
+  const totalPrice = calculatePrice(PRICE, quantity, discount);
+
+  return totalPrice;
 };
 
 document.getElementById("submitButton").addEventListener("click", (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    totalPrice = getPrice();
-    document.getElementById("totalPrice").innerHTML = totalPrice;
+  totalPrice = getPrice();
+  document.getElementById("totalPrice").innerHTML = totalPrice;
+});
+
+document.getElementById("resetButton").addEventListener("click", (e) => {
+  document.getElementById("totalPrice").innerHTML = 0;
 });

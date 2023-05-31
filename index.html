@@ -67,17 +67,12 @@
                 <a class="nav-link" href="#ser-orador">Conviértete en orador</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link tickets"
-                  href="#tickets"
-                  >Comprar tickets</a
-                >
+                <a class="nav-link tickets" href="#tickets">Comprar tickets</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
-
     </header>
 
     <!-- Main content -->
@@ -101,9 +96,7 @@
             </button>
           </a>
           <a href="#tickets">
-            <button
-              type="button"
-              class="btn btn-success">
+            <button type="button" class="btn btn-success">
               Comprar tickets
             </button>
           </a>
@@ -249,9 +242,7 @@
                   Recuerda incluir un título para tu charla
                 </p>
               </div>
-              <button type="submit" class="col-12 btn btn-form">
-                Enviar
-              </button>
+              <button type="submit" class="col-12 btn btn-form">Enviar</button>
             </form>
           </div>
         </div>
@@ -267,7 +258,9 @@
             <div class="card-body">
               <h5 class="card-title">Estudiante</h5>
               <p class="card-text">Tienen un descuento</p>
-              <p class="card-text fw-bold"><span id="studentDiscount">80</span>%</p>
+              <p class="card-text fw-bold">
+                <span id="studentDiscount">80</span>%
+              </p>
               <p class="card-text text-muted">* presentar documentación</p>
             </div>
           </div>
@@ -278,7 +271,9 @@
             <div class="card-body">
               <h5 class="card-title">Trainee</h5>
               <p class="card-text">Tienen un descuento</p>
-              <p class="card-text fw-bold"><span id="traineeDiscount">50</span>%</p>
+              <p class="card-text fw-bold">
+                <span id="traineeDiscount">50</span>%
+              </p>
               <p class="card-text text-muted">* presentar documentación</p>
             </div>
           </div>
@@ -289,7 +284,9 @@
             <div class="card-body">
               <h5 class="card-title">Junior</h5>
               <p class="card-text">Tienen un descuento</p>
-              <p class="card-text fw-bold"><span id="juniorDiscount">15</span>%</p>
+              <p class="card-text fw-bold">
+                <span id="juniorDiscount">15</span>%
+              </p>
               <p class="card-text text-muted">* presentar documentación</p>
             </div>
           </div>
@@ -297,7 +294,9 @@
 
         <div class="form text-center">
           <p class="text-uppercase">Venta</p>
-          <p class="text-uppercase h2 fw-medium">Valor del ticket $<span id="price"></span></p>
+          <p class="text-uppercase h2 fw-medium">
+            Valor del ticket $<span id="price"></span>
+          </p>
 
           <div class="container">
             <form class="mb-2 row">
@@ -344,8 +343,7 @@
                     min="1"
                     step="1"
                     placeholder="Cantidad"
-                    required
-                    />
+                    required />
                 </div>
                 <div class="mb-3 pe-md-1 col-12 col-md-6">
                   <p class="text-start ps-1">
@@ -362,10 +360,16 @@
                 </div>
               </div>
               <div class="d-flex justify-content-between">
-                <button type="reset" class="col-5 btn btn-form">
+                <button
+                  type="reset"
+                  class="col-5 btn btn-form"
+                  id="resetButton">
                   Borrar
                 </button>
-                <button type="submit" class="col-5 btn btn-form" id="submitButton">
+                <button
+                  type="submit"
+                  class="col-5 btn btn-form"
+                  id="submitButton">
                   Resumen
                 </button>
               </div>

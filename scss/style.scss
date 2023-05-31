@@ -104,14 +104,13 @@ main {
     padding: 2rem 1rem;
     background-color: #333a40;
   }
-
 }
 
 .btn-form {
   background-color: $btn-green;
   border-color: $btn-green;
-  color: #ddd;
-  
+  color: #eee;
+
   &:hover {
     background-color: #82b32d;
   }
